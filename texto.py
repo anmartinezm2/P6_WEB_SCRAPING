@@ -3,12 +3,6 @@ from bs4 import BeautifulSoup
 import pandas as pd
 import re
 
-# Guardar el script completo en un archivo .py local
-script_code = """import requests
-from bs4 import BeautifulSoup
-import pandas as pd
-import re
-
 url = "https://ninacosmetic.mx/bissu/"
 response = requests.get(url)
 response.encoding = 'utf-8'
@@ -39,9 +33,3 @@ for producto in productos:
 df = pd.DataFrame(datos)
 df.to_csv("catalogo_bissu.csv", index=False)
 print("Scraping exitoso y archivo catalogo_bissu.csv creado.")
-"""
-
-#with open("scraper.py", "w", encoding="utf-8") as f:
-    #f.write(script_code)
-with open("texto.py", "w", encoding="utf-8") as f:
-    f.write(script_code)
